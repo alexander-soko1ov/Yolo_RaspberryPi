@@ -35,6 +35,7 @@
 pip install torch torchvision torchaudio
 pip install opencv-python
 pip install yolov8
+```
 
 ## Установка
 Следуйте инструкциям ниже для установки и настройки проекта:
@@ -42,3 +43,43 @@ pip install yolov8
 ```sh
 git clone https://github.com/username/yolov8-uav-port.git
 cd yolov8-uav-port
+```
+### 2. Утановите необходимые библиотеки:
+```sh
+pip install -r requirements.txt
+```
+### 3. Настройте окружение:
+- Установите Raspberry Pi OS на ваш Raspberry Pi CM4;
+- Настройте камеру и убедитесь, что она работает корректно;
+- Скопируйте код на Raspberry Pi CM4.
+
+### Структура проекта
+Описание структуры файлов и папок в проекте:
+```bash
+yolov8-uav-port/
+│
+├── data/                   # Данные и модели
+│   ├── yolov8.pt           # Предобученная модель YOLOv8
+│   └── sample_images/      # Примеры изображений для тестирования
+│
+├── scripts/                # Скрипты для запуска и настройки
+│   ├── run_yolov8.py       # Основной скрипт для запуска YOLOv8
+│   └── setup_camera.py     # Скрипт для настройки камеры
+│
+├── docs/                   # Документация проекта
+│   └── README.md           # Основной файл документации
+│
+├── tests/                  # Тесты для проверки работоспособности
+│   └── test_yolov8.py      # Тесты для YOLOv8
+│
+├── requirements.txt        # Список зависимостей проекта
+└── LICENSE                 # Лицензия проекта
+```
+
+### Лицензия
+
+### Контакты
+Для вопросов и предложений обращайтесь:
+- Автор: Соколов Александр, Кузьмин Захар
+- Email: 
+- GitHub: 
