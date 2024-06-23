@@ -35,3 +35,10 @@
 pip install torch torchvision torchaudio
 pip install opencv-python
 pip install yolov8
+
+## Установка
+Следуйте инструкциям ниже для установки и настройки проекта:
+### 1. Клонируйте репозиторий
+```sh
+git clone https://github.com/username/yolov8-uav-port.git
+cd yolov8-uav-port
