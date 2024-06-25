@@ -93,8 +93,12 @@ yolov8-uav-port/
   <em>Скорость обработки одного кадра используя стандарную модель YOLOv8n</em>
 </p>
 
-### Скорость обработки одного кадра используя модель YOLOv8n NCNN
-![](https://github.com/alexander-soko1ov/Yolo_RaspberryPi/blob/main/yolov8n_ncnn.png)
+<p align="center">
+  <img src="[https://github.com/alexander-soko1ov/Yolo_RaspberryPi/blob/main/yolov8n.png](https://github.com/alexander-soko1ov/Yolo_RaspberryPi/blob/main/yolov8n_ncnn.png)" alt="Скорость обработки одного кадра используя модель YOLOv8n NCNN" />
+  <br>
+  <em>Скорость обработки одного кадра используя модель YOLOv8n NCNN</em>
+</p>
+
 
 ## Вклад
 Если вы хотите внести вклад в проект, пожалуйста, следуйте этим инструкциям:
