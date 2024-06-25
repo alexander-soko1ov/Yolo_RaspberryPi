@@ -30,35 +30,50 @@
 - PyTorch
 - YOLOv8
 
-### Библиотеки Python
-Установите необходимые библиотеки:
+### Обновление пакетов
+Обновите все пакеты Linux:
 ```sh
-pip install torch torchvision torchaudio
-pip install opencv-python
-pip install yolov8
+sudo apt update
+sudo apt upgrade
 ```
 
 ## Установка
 Следуйте инструкциям ниже для установки и настройки проекта:
-### 1. Клонируйте репозиторий
+### 1. Смонтируйте папку и перейдите в неё:
 ```sh
-git clone https://github.com/username/yolov8-uav-port.git
-cd yolov8-uav-port
+mkdir person_detect
+cd person_detect
 ```
-### 2. Установите необходимые библиотеки:
+### 2. Установите виртуальную среду и активируйте её:
 ```sh
-pip install -r requirements.txt
+python3 -m venv env
+source ./env/bin/activate
 ```
-### 3. Настройте окружение:
-- Установите Raspberry Pi OS на ваш Raspberry Pi CM4;
-- Настройте камеру и убедитесь, что она работает корректно;
-- Скопируйте код на Raspberry Pi CM4.
+### 3. Скачать ultralytics:
+```sh
+pip3 install ultralytics
+```
+### 4. Конвертируем модель в формат NCNN:
+```sh
+yolo predict model='./yolov8n_ncnn_model' source='https://ultralytics.com/images/bus.jpg'
+```
+### 5. Запускаем тест использующий стандартную модель:
+```sh
+yolo export model=yolov8n.pt format=ncnn
+```
+### 6. Запускаем тест использующий модель в формате NCNN:
+```sh
+yolo predict model=yolov8n.pt source='https://ultralytics.com/images/bus.jpg'
+```
+### 7. Настройте внешних модулей:
+- Подключите камеру к Raspberry Pi CM4;
+- Настройте камеру и убедитесь, что она работает корректно.
 
 ## Использование
 Следуйте этим шагам для запуска нейронной сети на полётном контроллере:
 ### 1. Запустите скрипт распознавания объектов:
 ```sh
-python run_yolov8.py
+python3 test_camera.py
 ```
 ### 2. Просмотрите результаты:
 Результаты распознавания объектов будут отображаться в режиме реального времени на экране
@@ -66,24 +81,27 @@ python run_yolov8.py
 ### Структура проекта
 Описание структуры файлов и папок в проекте:
 ```bash
-yolov8-uav-port/
-│
-├── data/                   # Данные и модели
-│   ├── yolov8.pt           # Предобученная модель YOLOv8
-│   └── sample_images/      # Примеры изображений для тестирования
-│
-├── scripts/                # Скрипты для запуска и настройки
-│   ├── run_yolov8.py       # Основной скрипт для запуска YOLOv8
-│   └── setup_camera.py     # Скрипт для настройки камеры
-│
-├── docs/                   # Документация проекта
-│   └── README.md           # Основной файл документации
-│
-├── tests/                  # Тесты для проверки работоспособности
-│   └── test_yolov8.py      # Тесты для YOLOv8
-│
-├── requirements.txt        # Список зависимостей проекта
-└── LICENSE                 # Лицензия проекта
+├── bus.jpg                     # Изображение для тестирования 
+├── env                         # Каталог виртуального окружения Python
+│   ├── bin                     # Исполняемые файлы и скрипты окружения
+│   ├── include                 # Заголовочные файлы C/C++ для окружения
+│   ├── lib                     # Библиотеки Python для окружения
+│   ├── lib64 -> lib            # Символическая ссылка на каталог lib
+│   ├── pyvenv.cfg              # Конфигурационный файл виртуального окружения
+│   └── share                   # Общие файлы данных для окружения
+├── runs                        # Каталог для хранения результатов запуска
+│   └── detect                  # Подкаталог для хранения результатов детектирования
+├── test_2.mp4                  # Видео файл для тестирования
+├── test_camera.py              # Скрипт для тестирования работы с камерой
+├── test_video.py               # Скрипт для тестирования работы с видео
+├── yolov8n_ncnn_model          # Каталог с моделью YOLOv8n для NCNN (инференс движок)
+│   ├── metadata.yaml           # Метаданные модели в формате YAML
+│   ├── model.ncnn.bin          # Бинарные данные модели для NCNN
+│   ├── model.ncnn.param        # Параметры модели для NCNN
+│   └── model_ncnn.py           # Скрипт для работы с моделью NCNN
+├── yolov8n.pt                  # Модель YOLOv8n в формате PyTorch
+├── yolov8n.torchscript         # Модель YOLOv8n в формате TorchScript (для более эффективного выполнения)
+└── LICENSE                     # Лицензия проекта
 ```
 ## Результаты проекта
 
