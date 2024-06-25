@@ -94,7 +94,7 @@ yolov8-uav-port/
 </p>
 
 <p align="center">
-  <img src="[https://github.com/alexander-soko1ov/Yolo_RaspberryPi/blob/main/yolov8n.png](https://github.com/alexander-soko1ov/Yolo_RaspberryPi/blob/main/yolov8n_ncnn.png)" alt="Скорость обработки одного кадра используя модель YOLOv8n NCNN" />
+  <img src="https://github.com/alexander-soko1ov/Yolo_RaspberryPi/blob/main/yolov8n_ncnn.png" alt="Скорость обработки одного кадра используя модель YOLOv8n NCNN" />
   <br>
   <em>Скорость обработки одного кадра используя модель YOLOv8n NCNN</em>
 </p>
