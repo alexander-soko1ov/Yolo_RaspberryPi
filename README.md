@@ -86,11 +86,9 @@ yolov8-uav-port/
 └── LICENSE                 # Лицензия проекта
 ```
 ## Результаты проекта
-### Скорость обработки одного кадра используя стандарную модель YOLOv8n
-![Скорость обработки одного кадра используя стандарную модель YOLOv8n](https://github.com/alexander-soko1ov/Yolo_RaspberryPi/blob/main/yolov8n.png "Скорость обработки одного кадра используя стандарную модель YOLOv8n")
 
 <p align="center">
-  <img src="https://github.com/alexander-soko1ov/Yolo_RaspberryPi/blob/main/yolov8n.png" alt="Скорость обработки одного кадра используя стандарную модель YOLOv8n" width="200"/>
+  <img src="https://github.com/alexander-soko1ov/Yolo_RaspberryPi/blob/main/yolov8n.png" alt="Скорость обработки одного кадра используя стандарную модель YOLOv8n" />
   <br>
   <em>Скорость обработки одного кадра используя стандарную модель YOLOv8n</em>
 </p>
