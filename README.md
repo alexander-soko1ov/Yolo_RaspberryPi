@@ -100,8 +100,8 @@ python3 test_camera.py
 │   ├── model.ncnn.param        # Параметры модели для NCNN
 │   └── model_ncnn.py           # Скрипт для работы с моделью NCNN
 ├── yolov8n.pt                  # Модель YOLOv8n в формате PyTorch
-├── yolov8n.torchscript         # Модель YOLOv8n в формате TorchScript (для более эффективного выполнения)
-└── LICENSE                     # Лицензия проекта
+└── yolov8n.torchscript         # Модель YOLOv8n в формате TorchScript (для более эффективного выполнения)
+
 ```
 ## Результаты проекта
 
